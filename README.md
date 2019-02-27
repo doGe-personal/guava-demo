@@ -126,7 +126,7 @@
         类似ThreadLocal.ThreadLocalMap 维护了一个线程内部变量。
 ##  5.其他
         Optional,Preconditions与Java8中的Optional,Predicate相关，Preconditions对常用的一些Predicate做了封装。
-       
-        *****特别感谢您的分享****
+        因为时间比较短，后边我会抽时间深入学习源码。
+        *****特别感谢您的分享*****
         
 
