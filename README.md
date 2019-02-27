@@ -34,7 +34,8 @@
             }
     ```
 ##	2.函数式编程(函数式强调用函数的方式改变对象的状态)
-		Guava的函数式接口继承了Java8的相应功能的接口，做到兼容性。与Java8一致面向接口编程的方式。但 Java8缺少对各个函数式的整合。
+	    Guava的函数式接口继承了Java8的相应功能的接口，做到兼容性。与Java8一致面向接口编程的方式。
+	但Java8缺少对各个函数式的整合。
   - Function<F, T>: 定义参数类型(入参F，出参T),跟 Java8保持一致，用法也相同。
   - Functions: 相当于函数式接口的工厂,利用枚举单例模式并利用了懒加载的特性，例如ToStringFunction,IdentityFunction...
 			其中几个较为实用的接口为: ForMapWithDefault (为Map.get()设置默认值),PredicateFunction(类似Java8的定义Predicate),
@@ -119,9 +120,11 @@
    ```
 ##  4.集合工具
         Guava提供了几个比较实用的集合工具(Multiset,Multimap,BiMap,Table)。
-        Multiset: HashMultiset.create();方法构建，查看源码HashMultiset继承父类的标准构造方法AbstractMapBasedMultiset(Map<E, Count> backingMap);
-        内部维护了一个Map，key为Multiset的元素，Count为计数器，实现了序列化，并重写了equals和hashCode方法，并且有final修饰符修饰，保证实例化之后不会被更改，
-        每个key对应一个唯一的Count计数器，类似ThreadLocal.ThreadLocalMap 维护了一个线程内部变量。
+        Multiset: HashMultiset.create();方法构建，查看源码HashMultiset继承父类的标准构造方法
+        AbstractMapBasedMultiset(Map<E, Count> backingMap);
+        内部维护了一个Map，key为Multiset的元素，Count为计数器，实现了序列化，并重写了equals和hashCode方法，
+        并且有final修饰符修饰，保证实例化之后不会被更改，每个key对应一个唯一的Count计数器，
+        类似ThreadLocal.ThreadLocalMap 维护了一个线程内部变量。
 ##  5.其他
         Optional,Preconditions与Java8中的Optional,Predicate相关，Preconditions对常用的一些Predicate做了封装。
 
