@@ -88,13 +88,13 @@
        
        
 ##  3.Guava Cache
-        Guava提供了一个基于Jvm的缓存工具库。实现了很多缓存优化的算法，比如LRU缓存机制(Java中LinkHashMap有类似实现)
-        LocalCache继承Java并发包的java.util.concurrent.ConcurrentMap保证并发量(类似Java的ConcurrentHashMap)，
-        CashLoader(抽象类,并定义from方法入参函数式接口作为数据来源),CacheBuilder(生成器模式，构建LoadingCache的实现类),
-        LoadingCache(Cache的核心接口,定义子类接口的行为get(),refresh()等):三个核心类或接口，
+      Guava提供了一个基于Jvm的缓存工具库。实现了很多缓存优化的算法，比如LRU缓存机制(Java中LinkHashMap有类似实现)
+      LocalCache继承Java并发包的java.util.concurrent.ConcurrentMap保证并发量(类似Java的ConcurrentHashMap)，
+      CashLoader(抽象类,并定义from方法入参函数式接口作为数据来源),CacheBuilder(生成器模式，构建LoadingCache的实现类),
+      LoadingCache(Cache的核心接口,定义子类接口的行为get(),refresh()等):三个核心类或接口，
    ```text
-    数据预加载：
-    测试如下:
+     数据预加载：
+     测试如下:
         @Test
         public void testCachePreLoad() throws InterruptedException {
             CacheLoader<String, String> cacheLoader = CacheLoader.from(s -> s != null ? s.toLowerCase() : null);
@@ -103,7 +103,7 @@
             assertThat(loadingCache.size(), equalTo(2L));
         }
   
-    缓存刷新：
+     缓存刷新：
         Guava cache可以设置超时时间，如果超时则重新从Provider里获取数据
         测试如下： 
         @Test
