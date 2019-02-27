@@ -1,11 +1,11 @@
 # Guava学习心得
 		Guava是一种基于开源的Java库，从源码查看感受到其标准简洁以及对代码有高度的优化。避免了开发过程中充分造轮子。
-	通过查看源码可以学习到“设计模式运用”,“工具类方法的编写规范”,“代码性能优化”,“最佳实践”等很多相关的知识点，是一套值得学习研究的源码库。
-	不过具体是否应用依据项目而定，在Java8环境下，Java8同样提供一下工具类和函数式接口与guava有重叠的功能,类似Iava8有Collections,Arrays,
-	Optional,StringUtils,Stream,Consumer等。所以在Java中没有的工具类封装时参考Guava的相关实现是一个不错的选择。
-	通过这两天我对guava几个核心模块做了测试学习，心得如下:
+	通过查看源码可以学习到“设计模式运用”,“工具类方法的编写规范”,“代码性能优化”,“最佳实践”等很多相关的知识点，是一套
+	值得学习研究的源码库。不过具体是否应用依据项目而定，在Java8环境下，Java8同样提供一下工具类和函数式接口与guava有
+	重叠的功能,类似Iava8有Collections,Arrays,Optional,StringUtils,Stream,Consumer等。所以在Java中没有的工具类
+	封装时参考Guava的相关实现是一个不错的选择。通过这两天我对guava几个核心模块做了测试学习，心得如下:
 
-##	1.字符串集合转换相关(Joiner,Splitter,CharMatcher,CaseFormat)
+## 1.字符串集合转换相关(Joiner,Splitter,CharMatcher,CaseFormat)
   - Joiner: 主要做集合转换成字符串，提供静态方法on(String separator) | on(char separator) 
 		  设计为生成器模式[link](https://projectlombok.org/api/lombok/experimental/Builder.html),
 		  字符串拼接使用StringBuilder(非线程安全)性能较好
