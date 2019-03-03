@@ -3,7 +3,7 @@
 	通过查看源码可以学习到“设计模式运用”,“工具类方法的编写规范”,“代码性能优化”,“最佳实践”等很多相关的知识点，是一套
 	值得学习研究的源码库。不过具体是否应用依据项目而定，在Java8环境下，Java8同样提供一些工具类和函数式接口与guava有
 	重叠的功能,类似Java8有Collections,Arrays,Optional,StringUtils,Stream,Consumer等。所以在Java中没有所需要的
-	工具类封装时参考Guava的相关实现是一个不错的选择。因工作比较忙,所以我只对guava几个模块做了测试学习,学习心得如下:
+	工具类封装时参考Guava的相关实现是一个不错的选择。学习心得如下:
 
 ## 1.字符串集合转换相关(Joiner,Splitter,CharMatcher,CaseFormat)
   - Joiner: 主要做集合转换成字符串，提供静态方法on(String separator) | on(char separator) 
@@ -126,7 +126,6 @@
         类似ThreadLocal.ThreadLocalMap 维护了一个线程内部变量。
 ##  5.其他
         Optional,Preconditions与Java8中的Optional,Predicate相关，Preconditions对常用的一些Predicate做了封装。
-        因为时间比较短，后边我会抽时间深入学习源码。
-        *****特别感谢您的分享*****
+       
         
 

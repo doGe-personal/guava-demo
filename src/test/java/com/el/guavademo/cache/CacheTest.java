@@ -53,5 +53,18 @@ public class CacheTest {
         assertThat(r1.equals(r2), equalTo(true));
     }
 
+    public static void main(String[] args) {
+//        int t = 1000 ^ 1;
+//        System.out.println(t);
+
+        Integer a = 1;
+        Integer b = 1;
+        a=b=null;
+        System.out.println(a+" "+b);
+
+        while (true) {
+            System.out.println("AAAAA");
+        }
+    }
 
 }
